@@ -4,7 +4,7 @@
 
  int main()
  {
-     int i, n, item;
+     int i, n;
 
      cout<<"Enter the size of the array: ";
      cin>>n;
