@@ -23,28 +23,35 @@
     for(i=0; i<n; i++){
         //find the duplicates
         for(j=0; j<n; j++){
-            //    i=4           j=0
-            if(arr[i]==duplicates[j]){
-                count=0;
-                break;
-            }//arr[i]=1    arr[0]=1
+           //arr[i]=1    arr[j]=1
             //   i=4     j=0
             if(arr[i]==arr[j]){
                 count++;
+                // count=1
+            }
+             //    i=4 =1        j=0 =1
+            if(arr[i]==duplicates[j]){
+                break;
             }
 
         }//count=2
         if(count >= 2){
-            //               
+            //z=2
+            // duplicates[0] = 1              
             duplicates[z]=arr[i];
             z++;
         }
         count=0;
     }
-    cout<<" The Duplicate elements are:\n";
-    for(i=0;i<z;i++){
-        cout<<" "<<duplicates[i]<<" ";
+    if(z>0){
+        cout<<" The Duplicate elements are:\n";
+        for(i=0;i<z;i++){
+            cout<<" "<<duplicates[i]<<" ";
+        }
     }
-    return 0;
+    else{
+        cout<<"No Duplicates are found!";
+    }
+        return 0;
  }
 
